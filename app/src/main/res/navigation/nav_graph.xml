@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/splashView"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/splashView"
+        android:name="com.hamy.cloudstorage.Fragments.SplashView"
+        tools:layout="@layout/splash_view"
+        android:label="SplashView" >
+        <action
+            android:id="@+id/splash_to_main"
+            app:destination="@+id/mainView"
+            app:popUpTo="@id/mainView"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/splash_to_login"
+            app:destination="@+id/loginView"
+            app:popUpTo="@id/loginView"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/splash_to_signup"
+            app:destination="@+id/signUpView"
+            app:popUpTo="@id/signUpView"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/mainView"
+        tools:layout="@layout/mainview"
+        android:name="com.hamy.cloudstorage.Fragments.MainView"
+        android:label="MainView" />
+    <fragment
+        android:id="@+id/loginView"
+        tools:layout="@layout/loginview"
+        android:name="com.hamy.cloudstorage.Fragments.LoginView"
+        android:label="LoginView" />
+    <fragment
+        android:id="@+id/signUpView"
+        tools:layout="@layout/signupnview"
+        android:name="com.hamy.cloudstorage.Fragments.SignUpView"
+        android:label="SignUpView" />
+</navigation>
