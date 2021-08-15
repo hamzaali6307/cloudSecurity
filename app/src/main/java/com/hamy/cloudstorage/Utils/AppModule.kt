@@ -1,11 +1,16 @@
 package com.hamy.cloudstorage.Utils
 
+import com.hamy.cloudstorage.BuildConfig
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+    @Provides
+    fun provideUrl()  = BuildConfig.BaseUrl
 
 }
