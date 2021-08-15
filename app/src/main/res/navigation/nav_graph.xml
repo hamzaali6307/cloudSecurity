@@ -9,24 +9,18 @@
         android:id="@+id/splashView"
         android:name="com.hamy.cloudstorage.Fragments.SplashView"
         tools:layout="@layout/splash_view"
-        android:label="SplashView" >
+        android:label="SplashView">
         <action
             android:id="@+id/splash_to_main"
             app:destination="@+id/mainView"
-            app:popUpTo="@id/mainView"
-            app:popUpToInclusive="true"
             />
         <action
             android:id="@+id/splash_to_login"
             app:destination="@+id/loginView"
-            app:popUpTo="@id/loginView"
-            app:popUpToInclusive="true"
             />
         <action
             android:id="@+id/splash_to_signup"
             app:destination="@+id/signUpView"
-            app:popUpTo="@id/signUpView"
-            app:popUpToInclusive="true"
             />
     </fragment>
     <fragment
@@ -38,7 +32,13 @@
         android:id="@+id/loginView"
         tools:layout="@layout/loginview"
         android:name="com.hamy.cloudstorage.Fragments.LoginView"
-        android:label="LoginView" />
+        android:label="LoginView" >
+        <action
+            android:id="@+id/login_to_main"
+            app:destination="@+id/mainView"
+            />
+
+    </fragment>
     <fragment
         android:id="@+id/signUpView"
         tools:layout="@layout/signupnview"

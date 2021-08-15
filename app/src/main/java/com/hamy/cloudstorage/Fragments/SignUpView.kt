@@ -19,7 +19,7 @@ class SignUpView : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.splash_view, container, false)
+        return inflater.inflate(R.layout.signupnview, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

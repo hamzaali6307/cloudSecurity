@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import com.hamy.cloudstorage.R
 
-class LoginView : Fragment() {
+class FileView : Fragment() {
     lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,11 +19,32 @@ class LoginView : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.loginview, container, false)
+        return inflater.inflate(R.layout.fileview, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
+    companion object {
+        fun create(viewType:String): FileView {
+            var viewData = FileView()
+            when(viewType){
+                "Image" ->{
+                    viewData = FileView()
+                }
+                "Video" ->{
+                    viewData = FileView()
+                }
+                "Audio" ->{
+                    viewData = FileView()
+                }
+                "File" ->{
+                    viewData = FileView()
+                }
+            }
+            return viewData
+        }
+    }
+
 
 }

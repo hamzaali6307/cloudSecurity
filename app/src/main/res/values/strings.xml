@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">CloudStorage</string>
     <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password!</string>
+    <string name="or">OR</string>
+    <string name="signup">SignUp</string>
+    <string name="name">Name</string>
+    <string name="contact">Contact</string>
+    <string name="already_have_account">Already Have Account</string>
+    <string name="no_data_found_yet">No Data found yet!</string>
 </resources>

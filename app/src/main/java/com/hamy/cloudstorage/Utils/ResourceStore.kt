@@ -1,12 +1,18 @@
-package com.android.viewpager2tabsample
+package com.hamy.cloudstorage.Utils
+
+import com.hamy.cloudstorage.Fragments.FileView
+import com.hamy.cloudstorage.R
 
 interface ResourceStore {
     companion object {
-        val tabList = listOf(
-            R.string.tab1, R.string.tab2, R.string.tab3, R.string.tab4
+        val tabList = listOfNotNull(
+            "Image",
+            "Video",
+            "Audio",
+            "File"
         )
         val pagerFragments = listOf(
-            Tab1Fragment.create(), Tab2Fragment.create(),
-            Tab3Fragment.create(), Tab4Fragment.create())
+            FileView.create("Image"), FileView.create("Video"),
+            FileView.create("Audio"), FileView.create("File"))
     }
 }

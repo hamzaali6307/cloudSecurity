@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -47,8 +48,8 @@ dependencies {
     //dagger hilt
     implementation 'com.google.dagger:hilt-android:2.35'
     kapt 'com.google.dagger:hilt-android-compiler:2.31.1-alpha'
-    implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
-    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0")
+    implementation 'androidx.hilt:hilt-navigation-fragment:1.0.0'
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
 
     // lifeCycle
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
@@ -72,6 +73,12 @@ dependencies {
     // responsive ness of layout
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    // core routines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1'
+
+
 
 
 
