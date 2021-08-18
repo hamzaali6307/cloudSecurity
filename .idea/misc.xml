@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1328125" />
+        <entry key="app/src/main/res/drawable/ic_identity.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/drawable/loading_background.xml" value="0.2520833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11474164133738601" />
+        <entry key="app/src/main/res/layout/dialog_loading_view.xml" value="0.2359375" />
         <entry key="app/src/main/res/layout/fileview.xml" value="0.29791666666666666" />
         <entry key="app/src/main/res/layout/loginview.xml" value="0.335" />
         <entry key="app/src/main/res/layout/mainview.xml" value="0.18478260869565216" />

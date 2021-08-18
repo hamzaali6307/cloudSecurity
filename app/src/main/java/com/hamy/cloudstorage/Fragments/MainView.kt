@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
@@ -13,12 +14,14 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.hamy.cloudstorage.R
 import com.hamy.cloudstorage.Utils.ResourceStore
+import com.hamy.cloudstorage.ViewModels.MainViewModel
+import com.hamy.cloudstorage.databinding.MainviewBinding
 import kotlinx.android.synthetic.main.mainview.*
 
 
 class MainView : Fragment() {
+    lateinit var mainViewBinder: MainviewBinding
     lateinit var navController: NavController
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +32,8 @@ class MainView : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.mainview, container, false)
+        mainViewBinder = MainviewBinding.inflate(inflater, container, false)
+        return mainViewBinder.root
 
 
 
@@ -42,7 +46,7 @@ class MainView : Fragment() {
     }
 
     private fun renderViewPager() {
-        viewpager.adapter = object : FragmentStateAdapter(this) {
+        mainViewBinder.viewpager.adapter = object : FragmentStateAdapter(this) {
             override fun createFragment(position: Int): Fragment {
                 return ResourceStore.pagerFragments[position]
             }
