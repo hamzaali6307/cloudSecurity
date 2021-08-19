@@ -10,4 +10,7 @@
     <string name="contact">Contact</string>
     <string name="already_have_account">Already Have Account</string>
     <string name="no_data_found_yet">No Data found yet!</string>
+    <string name="please_wait">Please Wait...</string>
+    <string name="passoword_hint">Password must be combination  small/capital letters &amp; char </string>
+    <string name="mail_hint">Mail be like test@gmail.com</string>
 </resources>

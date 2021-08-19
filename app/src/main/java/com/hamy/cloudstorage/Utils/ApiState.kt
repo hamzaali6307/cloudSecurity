@@ -7,7 +7,7 @@ import java.util.ArrayList
 sealed class ApiState{
     object Loading : ApiState()
     class Failure(val msg: Throwable) : ApiState()
-    class Success(val data: Call<ArrayList<Data>>): ApiState()
+    class Success(val data: ArrayList<Data>): ApiState()
     object Empty : ApiState()
 
 

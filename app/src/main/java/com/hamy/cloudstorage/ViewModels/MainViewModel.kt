@@ -2,6 +2,7 @@ package com.hamy.cloudstorage.ViewModels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.hamy.cloudstorage.Model.Data
 import com.hamy.cloudstorage.Repository.MainRepositry
 import com.hamy.cloudstorage.Utils.ApiState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,9 +17,9 @@ import javax.inject.Inject
 class MainViewModel
 @Inject
 constructor(val mainRepositry: MainRepositry) : ViewModel() {
-
      private  val postStateFlow: MutableStateFlow<ApiState> =
          MutableStateFlow(ApiState.Empty)
+
      val myPostStateFlow: StateFlow<ApiState> = postStateFlow
 
     fun getLogin( email:String,passwword:String) = viewModelScope.launch {

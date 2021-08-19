@@ -7,5 +7,5 @@ import javax.inject.Inject
 
 class ApiServiceProvider @Inject constructor(private val api: ApiService){
 
-    suspend fun userLogin( email:String, password:String) : Call<ArrayList<Data>> = api.sendLoginData(email,password )
+    suspend fun userLogin( email:String, password:String) : ArrayList<Data> = api.sendLoginData(email,password )
 }
