@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.hamy.cloudstorage"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -92,6 +92,7 @@ dependencies {
     // run time permission
     implementation 'com.karumi:dexter:6.2.1'
 
+    // country selecter for contact number
 
 
 

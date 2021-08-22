@@ -18,10 +18,7 @@
             android:id="@+id/splash_to_login"
             app:destination="@+id/loginView"
             />
-        <action
-            android:id="@+id/splash_to_signup"
-            app:destination="@+id/signUpView"
-            />
+
     </fragment>
     <fragment
         android:id="@+id/mainView"
@@ -37,11 +34,22 @@
             android:id="@+id/login_to_main"
             app:destination="@+id/mainView"
             />
+        <action
+            android:id="@+id/login_to_signup"
+            app:destination="@+id/signUpView"
+
+            />
 
     </fragment>
     <fragment
         android:id="@+id/signUpView"
         tools:layout="@layout/signupnview"
         android:name="com.hamy.cloudstorage.Fragments.SignUpView"
-        android:label="SignUpView" />
+        android:label="SignUpView" >
+        <action
+            android:id="@+id/signup_to_login"
+            app:destination="@+id/loginView"
+            />
+
+    </fragment>
 </navigation>

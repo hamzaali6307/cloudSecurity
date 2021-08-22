@@ -54,6 +54,10 @@ class LoginView : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
 
+        binding.txtSignup.setOnClickListener {
+            navController.navigate(R.id.login_to_signup)
+        }
+
         binding.btnLogin.setOnClickListener {
             binding.txtEmailInput.setBoxBackgroundColorResource(R.color.white)
             binding.txtInputPassword.setBoxBackgroundColorResource(R.color.white)
